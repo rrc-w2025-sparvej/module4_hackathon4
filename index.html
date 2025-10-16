@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hackathon Event Registration</title>
+  <style>
+    .error-message {
+      color: red;
+      font-style: italic;
+      display: block;
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hackathon Registration Form</h1>
+
+  <form id="hackathonForm" action="https://httpbin.org/post" method="post">
+    <fieldset>
+      <legend>Participant Information</legend>
+
+      <label for="userName">Full Name:</label>
+      <input type="text" id="userName" name="userName">
+      <span id="userNameError" class="error-message" aria-live="polite"></span>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+      <span id="emailError" class="error-message" aria-live="polite"></span>
+
+      <label for="teamName">Team Name (Optional):</label>
+      <input type="text" id="teamName" name="teamName">
+    </fieldset>
+
+    <fieldset>
+      <legend>Event Preferences</legend>
+
+      <p>Choose Your Hackathon Category:</p>
+      <label><input type="radio" name="category" value="Web Development"> Web Development</label><br>
+      <label><input type="radio" name="category" value="AI & ML"> AI & ML</label><br>
+      <label><input type="radio" name="category" value="Game Design"> Game Design</label><br>
+      <label><input type="radio" name="category" value="Cybersecurity"> Cybersecurity</label>
+      <span id="categoryError" class="error-message" aria-live="polite"></span>
+
+      <fieldset>
+        <legend>Skills You Bring</legend>
+        <label><input type="checkbox" name="skills" value="HTML/CSS"> HTML/CSS</label><br>
+        <label><input type="checkbox" name="skills" value="JavaScript"> JavaScript</label><br>
+        <label><input type="checkbox" name="skills" value="Python"> Python</label><br>
+        <label><input type="checkbox" name="skills" value="UI/UX Design"> UI/UX Design</label>
+      </fieldset>
+
+      <label for="experience">Experience Level:</label>
+      <select id="experience" name="experience">
+        <option value="">Select Level</option>
+        <option value="Beginner">Beginner</option>
+        <option value="Intermediate">Intermediate</option>
+        <option value="Advanced">Advanced</option>
+      </select>
+      <span id="experienceError" class="error-message" aria-live="polite"></span>
+
+      <label for="participantCode">Participant Code (Format: HACK-2025):</label>
+      <input type="text" id="participantCode" name="participantCode" placeholder="HACK-2025">
+      <span id="participantCodeError" class="error-message" aria-live="polite"></span>
+
+      <label for="eventDate">Event Date:</label>
+      <input type="date" id="eventDate" name="eventDate">
+      <span id="eventDateError" class="error-message" aria-live="polite"></span>
+
+      <label for="comments">Why are you excited for this hackathon?</label>
+      <textarea id="comments" name="comments" rows="4" cols="40" placeholder="Share your thoughts..."></textarea>
+    </fieldset>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <footer>
+  </footer>
+</body>
+</html>
